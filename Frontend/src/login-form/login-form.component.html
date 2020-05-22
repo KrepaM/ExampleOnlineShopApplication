@@ -1,0 +1,21 @@
+<div>
+  <div *ngIf="isLoggedIn">
+    <!--Login Form-->
+    <input type="text">
+    <!--Login-->
+    <input type="password">
+    <!--Password-->
+    <button *ngIf="!isLoggedIn" (click)="logout()">
+      <!--Logout button-->
+      {{logoutButtonLabel}}
+    </button>
+  </div>
+  <div *ngIf="!isLoggedIn">
+    <!--Images (Shopcart, Profile)-->
+    Shopcart Profile
+    <button (click)="login()">
+      <!--Login button-->
+      {{loginButtonLabel}}
+    </button>
+  </div>
+</div>
