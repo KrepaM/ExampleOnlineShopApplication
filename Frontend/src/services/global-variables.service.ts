@@ -16,4 +16,11 @@ export class GlobalVariablesService {
   }
   //
 
+  // Config -> utowrzyć osobny serwis
+  serverAddress: string = "http://localhost:8080/"; // Sprawdzić że można po https
+  minLoginLength: number = 3;
+  minPasswordLength: number = 5;
+  //
+
+
 }

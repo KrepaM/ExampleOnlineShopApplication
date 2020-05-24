@@ -1,11 +1,11 @@
 <div>
   <div *ngIf="isLoggedIn">
     <!--Login Form-->
-    <input type="text">
+    <input type="text" [(ngModel)]="loginInput">
     <!--Login-->
-    <input type="password">
+    <input type="password" [(ngModel)]="passwordInput">
     <!--Password-->
-    <button *ngIf="!isLoggedIn" (click)="logout()">
+    <button (click)="login()">
       <!--Logout button-->
       {{logoutButtonLabel}}
     </button>
@@ -13,7 +13,7 @@
   <div *ngIf="!isLoggedIn">
     <!--Images (Shopcart, Profile)-->
     Shopcart Profile
-    <button (click)="login()">
+    <button (click)="logout()">
       <!--Login button-->
       {{loginButtonLabel}}
     </button>

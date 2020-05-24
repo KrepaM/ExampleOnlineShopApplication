@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConnectionService } from 'src/services/client-server-communication.service';
+import { ConnectionService } from 'src/services/server-communication.service';
 import { ConstModule } from 'src/modules/const.module';
 
 @Component({
@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
   title: String = "ABC";
 
   ngOnInit(): void {
-    this.title = this.consts.serverAddress;
+    // this.title = this.consts.serverAddress;
   }
 }
